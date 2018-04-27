@@ -1,1 +1,9 @@
+per clonazione:
+
 git clone http://github.com/SatheesKumar91/Algraph.git
+
+per aggiungere tutti i file alla repository:
+
+git add *
+git commit -m 'commit messaggio'
+git push
