@@ -8,6 +8,10 @@ git add *
 git commit -m 'commit messaggio'
 git push
 
+per aggiungere un solo file alla repository:
+
+git add PathFile.Extenzione
+
 per aggiornare prima di iniziare a lavorare:
 
 git pull 
