@@ -7,3 +7,11 @@ per aggiungere tutti i file alla repository:
 git add *
 git commit -m 'commit messaggio'
 git push
+
+per aggiornare prima di iniziare a lavorare:
+
+git pull 
+
+per vedere lo stato:
+
+git status
