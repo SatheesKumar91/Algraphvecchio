@@ -12,7 +12,6 @@ public class Edge<T extends Comparable<T>> implements Comparable<Node<T>> {
 		this.v = v;
 	}
 
-	
 	public Integer getWeight() {
 		return peso;
 	}
@@ -42,9 +41,22 @@ public class Edge<T extends Comparable<T>> implements Comparable<Node<T>> {
 		this.v = v;
 	}
 
+	public Boolean connectEdgeNode(Node<T> u) {
+		//restituisce true se questo arco collega il nodo u a un altro nodo
+		return (this.v.equals(u) || this.u.equals(u));
+	}
+	public Node<T> otherNode(Node<T> u) {
+		//restitusce l'altro nodo nell'arco uv
+		if(this.v.equals(u))
+			return this.u;
+		else if(this.u.equals(u))
+			return this.v;
+		else
+			return null;
+	}
 	@Override
 	public String toString(){
-		String s = this.u + " <--" + this.peso + "--> " + this.v;		
+		String s = "[" + this.u + " <-" + this.peso + "-> " + this.v + "]";		
 		return s;
 	}
 

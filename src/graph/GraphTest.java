@@ -2,13 +2,7 @@ package graph;
 public class GraphTest {
 
 	public static void main(String[] args) {
-		Node<String> n1 = new Node<String>("A");
-		Node<String> n2 = new Node<String>("B");
-		Edge<String> ab = new Edge<String>(n1, n2, 2);
-		System.out.println(ab);
-		
 		Graph<String> g1 = new Graph<String>();
-//		GraphNotOriented<String> g1 = new GraphNotOriented<String>();
 		
 		Node<String> a = new Node<String>("A");
 		Node<String> b = new Node<String>("B");
@@ -26,17 +20,17 @@ public class GraphTest {
 		g1.insertNode(f);
 		g1.insertNode(g);
 		
-		g1.insertEdge(a, b);
-		g1.insertEdge(a, c);
-		g1.insertEdge(b, e);
-		g1.insertEdge(b, g);
-		g1.insertEdge(d, g);
-		g1.insertEdge(e, d);
-		g1.insertEdge(g, c);
-		g1.insertEdge(c, f);
+		g1.insertEdge(a, b, 1);
+		g1.insertEdge(a, c, 2);
+		g1.insertEdge(b, e, 3);
+		g1.insertEdge(b, g, 4);
+		g1.insertEdge(d, g, 5);
+		g1.insertEdge(e, d, 6);
+		g1.insertEdge(g, c, 7);
+		g1.insertEdge(c, f, 8);
 		
 		//arco che rompe il vincolo 2-colorabile
-		g1.insertEdge(b, c);
+		g1.insertEdge(b, c, 9);
 		g1.print();
 	}
 
