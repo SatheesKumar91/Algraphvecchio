@@ -1,6 +1,6 @@
 package graph;
 
-public class Edge<T extends Comparable<T>> implements Comparable<Node<T>> {
+public class Edge<T extends Comparable<T>> implements Comparable<Edge<T>> {
 	
 	private Integer peso;
 	private Node<T> u;
@@ -60,11 +60,8 @@ public class Edge<T extends Comparable<T>> implements Comparable<Node<T>> {
 		return s;
 	}
 
-	
-	//da rivedere
-	//edge<T> non funziona compareTo
 	@Override
 	public int compareTo(Edge<T> o) {
-		return (this.compareTo(o));
-	}
+		return(this.compareTo(o));
+	}	
 }

@@ -40,14 +40,13 @@ public class Graph<T extends Comparable<T>> implements IGraph<T> {
 	}
 
 	@Override
-	public Set<Node<T>> adj(Node<T> u) {
+	public TreeSet<Node<T>> adj(Node<T> u) {
 		//ritorna null se U non esiste
-		Set<Node<T>> adiacenti;
+		TreeSet<Node<T>> adiacenti = new TreeSet<Node<T>>();
 		if(this.nodi.contains(u))
 			for(Edge<T> uv: this.archi)
 				if(uv.connectEdgeNode(u)) 
 					adiacenti.add(uv.otherNode(u));
-		//mi dice adiacenti potrebbe non essere inizializzato ma non capisco perchè
 		else
 			adiacenti = null;
 		return adiacenti;
