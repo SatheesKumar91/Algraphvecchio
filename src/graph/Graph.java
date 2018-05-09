@@ -4,9 +4,10 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Graph<T extends Comparable<T>> implements IGraph<T> {
+
 	private TreeSet<Node<T>> nodi;
 	private TreeSet<Edge<T>> archi;
-	
+
 	public Graph() {
 		this.nodi = new TreeSet<Node<T>>();
 		this.archi = new TreeSet<Edge<T>>();
