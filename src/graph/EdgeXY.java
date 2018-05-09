@@ -24,11 +24,11 @@ public class EdgeXY<T extends Comparable<T>> extends Edge<T> {
 		this.v.setXsetY(x2, y2);
 	}
 
-	public void setUXY(Double x1, Double y1) {
+	public void setNodeUXY(Double x1, Double y1) {
 		this.u.setXsetY(x1, y1);
 	}
 
-	public void setVXY(Double x2, Double y2) {
+	public void setNodeVXY(Double x2, Double y2) {
 		this.v.setXsetY(x2, y2);
 	}
 
