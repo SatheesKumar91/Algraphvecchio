@@ -22,7 +22,6 @@ public class GraphTest {
 		NodeXY<String> f = new NodeXY<String>("F", 11., 12.);
 		NodeXY<String> g = new NodeXY<String>("G", 13., 14.);
 		//*/
-		
 		g1.insertNode(a);
 		g1.insertNode(b);
 		g1.insertNode(c);
