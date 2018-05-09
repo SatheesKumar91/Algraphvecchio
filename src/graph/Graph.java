@@ -59,10 +59,12 @@ public class Graph<T extends Comparable<T>> implements IGraph<T> {
 
 	@Override
 	public void print() {
-		System.out.print(" G = { ");
+		System.out.println(" G = V unione E");
+		System.out.print(" V = { ");
 		for (Node<T> node : nodi) {
 			System.out.print(node + ", ");
 		}
+		System.out.print(" }\n E = { ");
 		for (Edge<T> edge : archi) {
 			System.out.print(edge + ", ");
 		}
