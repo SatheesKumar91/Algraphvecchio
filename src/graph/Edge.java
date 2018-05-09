@@ -68,7 +68,7 @@ public class Edge<T extends Comparable<T>> implements Comparable<Edge<T>> {
 				if(this.v.equals(o.u)) {	//o = vu
 					 return 0;
 				} else
-					return this.v.compareTo(o.v);
+					return this.v.compareTo(o.u);
 			} else 
 				return this.u.compareTo(o.u);
 		} else
