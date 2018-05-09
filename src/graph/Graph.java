@@ -57,6 +57,10 @@ public class Graph<T extends Comparable<T>> implements IGraph<T> {
 		return this.nodi;
 	}
 
+	public Set<Edge<T>> E() {
+		return this.archi;
+	}
+
 	@Override
 	public void print() {
 		System.out.println(" G = V unione E");
