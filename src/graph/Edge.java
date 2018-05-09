@@ -62,6 +62,15 @@ public class Edge<T extends Comparable<T>> implements Comparable<Edge<T>> {
 
 	@Override
 	public int compareTo(Edge<T> o) {
-		return(this.compareTo(o));
-	}	
+		if(this.peso.equals(o.peso)) {
+			if(this.u.equals(o.u)) {
+				if(this.v.equals(o.v)) {
+					 return 0;
+				} else
+					return this.v.compareTo(o.v);
+			} else
+				return this.u.compareTo(o.u);
+		} else
+			return this.peso.compareTo(o.peso);
+	}
 }
