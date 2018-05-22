@@ -3,6 +3,9 @@ package graph;
 import java.util.Set;
 import java.util.TreeSet;
 
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+
 public class GraphXY<T extends Comparable<T>> extends Graph<T> {
 
 	private TreeSet<NodeXY<T>> nodi;
@@ -38,5 +41,12 @@ public class GraphXY<T extends Comparable<T>> extends Graph<T> {
 
 	public Set<EdgeXY<T>> EXY() {
 		return this.archi;
+	}
+	
+	public Pane draw(Double raggio) {
+		Graphica<T> dg = new Graphica<T>();
+		Pane console = new Pane();
+		console = dg.disegna(this, raggio, Color.WHITE, Color.BLACK);
+		return console;
 	}
 }

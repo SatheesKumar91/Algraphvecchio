@@ -4,7 +4,6 @@ import javafx.stage.Stage;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
 
 public class GraficaTest extends Application {
 	
@@ -30,9 +29,8 @@ public class GraficaTest extends Application {
 		
 		Double Height = 500.;
 		Double Width = 500.;
-		Graphica<String> dg = new Graphica<String>();
 		Pane console = new Pane();
-		console = dg.disegna(g1, Height, Width, 100., Color.YELLOW, Color.BLACK);
+		console = g1.draw(50.);
 		Scene scene = new Scene(console);
     	
     	primaryStage.setTitle("Welcome to FX!");

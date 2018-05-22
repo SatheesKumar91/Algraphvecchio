@@ -9,7 +9,7 @@ import javafx.scene.text.Text;
 
 public class Graphica<T extends Comparable<T>> {
 	
-	public Pane disegna(GraphXY<T> graph, Double Height, Double Width, Double raggio, Paint c1, Paint c2) {
+	public Pane disegna(GraphXY<T> graph, Double raggio, Paint c1, Paint c2) {
 		Double font = raggio*2;
 		Pane console = new Pane();
 		for (EdgeXY<T> edge : graph.EXY()) {
