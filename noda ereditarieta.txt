@@ -1,0 +1,18 @@
+da di iorio ho capito che
+non è necessaria una classe EdgeXY
+poichè un arco è un link tra due nodi e ha un peso
+quindi i nodi dell'arco devono accedere alle coordinate
+ma il costruttore di arco può prendere sia Node sia NodeXY
+esempio
+Node a = new Node();
+Node b = new Node();
+NodeXY a1 = new NodeXY();
+NodeXY b1 = new NodeXY();
+poi posso usare indistinamente questi
+Edge ab = newEdge(a, b)
+Edge ab = newEdge(a1, b)
+Edge ab = newEdge(a, b1)
+Edge ab = newEdge(a1, b1)
+con lo stesso costruttore di arco che sarà della forma
+Edge(Node, Node)
+poichè NodeXY è sottoclasse di Node
