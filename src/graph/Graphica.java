@@ -14,7 +14,11 @@ public class Graphica<T extends Comparable<T>> {
 		Pane console = new Pane();
 		for (EdgeXY<T> edge : graph.EXY()) {
 			Line lineToAdd = new Line(edge.getUX(), edge.getUY(), edge.getVX(), edge.getVY());
-			console.getChildren().add(lineToAdd);
+			Text textEdge = new Text(""+edge.getWeight());
+			textEdge.setX((edge.getNodeU().getX()+edge.getNodeV().getX())/2);
+			textEdge.setY((edge.getNodeU().getY()+edge.getNodeV().getY())/2);
+			textEdge.setFont(new Font(font/2));
+			console.getChildren().addAll(lineToAdd, textEdge);
 		}
 		
 		for (NodeXY<T> node : graph.VXY()) {
@@ -23,12 +27,13 @@ public class Graphica<T extends Comparable<T>> {
 			circleToAdd.setStroke(c2);
 			circleToAdd.setStrokeWidth(1.);
 			
-			Text text = new Text(""+node.getElement());
-			text.setX(node.getX()-raggio*2/3);
-			text.setY(node.getY()+raggio*4/5);
-			text.setFont(new Font(font));
+			Text textNode = new Text(""+node.getElement());
+			textNode.setX(node.getX()); //- raggio * a/b
+			textNode.setY(node.getY()); //+ raggio * c/d
+			textNode.setFont(new Font(font));
+			//textNode.setStyle("-fx-alignment: CENTER-LEFT;");
 			
-		   	console.getChildren().addAll(circleToAdd, text);
+		   	console.getChildren().addAll(circleToAdd, textNode);
 		}
 		return console;
 	}
