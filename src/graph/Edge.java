@@ -2,9 +2,13 @@ package graph;
 
 public class Edge<T extends Comparable<T>> implements Comparable<Edge<T>> {
 
+	// campi
+
 	private Integer peso;
 	private Node<T> u;
 	private Node<T> v;
+
+	// costruttori
 
 	public Edge(Node<T> u, Node<T> v, Integer peso) {
 		this.peso = peso;
@@ -12,29 +16,87 @@ public class Edge<T extends Comparable<T>> implements Comparable<Edge<T>> {
 		this.v = v;
 	}
 
-	public Integer getWeight() {
-		return peso;
+	public Edge(Node<T> u, Node<T> v, Integer peso, Double x1, Double y1, Double x2, Double y2) {
+		this.u = u;
+		this.v = v;
+		this.u.setXsetY(x1, y1);
+		this.v.setXsetY(x2, y2);
 	}
+
+	// setters
 
 	public void setWeight(Integer peso) {
 		this.peso = peso;
-	}
-
-	public Node<T> getNodeU() {
-		return u;
 	}
 
 	public void setNodeU(Node<T> u) {
 		this.u = u;
 	}
 
+	public void setNodeV(Node<T> v) {
+		this.v = v;
+	}
+
+	public void setUX(Double x1) {
+		this.u.setX(x1);
+	}
+
+	public void setUY(Double y1) {
+		this.u.setY(y1);
+	}
+
+	public void setVX(Double x2) {
+		this.v.setX(x2);
+	}
+
+	public void setVY(Double y2) {
+		this.v.setY(y2);
+	}
+
+	public void setNodeUXY(Double x1, Double y1) {
+		this.u.setXsetY(x1, y1);
+	}
+
+	public void setNodeVXY(Double x2, Double y2) {
+		this.v.setXsetY(x2, y2);
+	}
+
+	public void setAllXY(Double x1, Double y1, Double x2, Double y2) {
+		this.u.setXsetY(x1, y1);
+		this.v.setXsetY(x2, y2);
+	}
+	
+	// getters
+
+	public Integer getWeight() {
+		return peso;
+	}
+
+	public Node<T> getNodeU() {
+		return u;
+	}
+
 	public Node<T> getNodeV() {
 		return v;
 	}
 
-	public void setNodeV(Node<T> v) {
-		this.v = v;
+	public Double getUX() {
+		return this.u.getX();
 	}
+
+	public Double getUY() {
+		return this.u.getY();
+	}
+
+	public Double getVX() {
+		return this.v.getX();
+	}
+
+	public Double getVY() {
+		return this.v.getY();
+	}
+
+	// altri
 
 	public Boolean connectEdgeNode(Node<T> u) {
 		//restituisce true se questo arco collega il nodo u a un altro nodo

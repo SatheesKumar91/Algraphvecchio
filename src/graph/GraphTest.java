@@ -4,13 +4,13 @@ public class GraphTest {
 	public static void main(String[] args) {
 		Graph<String> g1 = new Graph<String>();
 		
-		NodeXY<String> a = new NodeXY<String>("A", 1., 2.);
-		NodeXY<String> b = new NodeXY<String>("B", 3., 4.);
-		NodeXY<String> c = new NodeXY<String>("C", 5., 6.);
-		NodeXY<String> d = new NodeXY<String>("D", 7., 8.);
-		NodeXY<String> e = new NodeXY<String>("E", 9., 10.);
-		NodeXY<String> f = new NodeXY<String>("F", 11., 12.);
-		NodeXY<String> g = new NodeXY<String>("G", 13., 14.);
+		Node<String> a = new Node<String>("A", 1., 2.);
+		Node<String> b = new Node<String>("B", 3., 4.);
+		Node<String> c = new Node<String>("C", 5., 6.);
+		Node<String> d = new Node<String>("D", 7., 8.);
+		Node<String> e = new Node<String>("E", 9., 10.);
+		Node<String> f = new Node<String>("F", 11., 12.);
+		Node<String> g = new Node<String>("G", 13., 14.);
 		
 		g1.insertNode(a);
 		g1.insertNode(b);

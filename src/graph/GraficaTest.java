@@ -13,11 +13,11 @@ public class GraficaTest extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-		GraphXY<String> g1 = new GraphXY<String>();
+		Graph<String> g1 = new Graph<String>();
 		
-		NodeXY<String> a = new NodeXY<String>("A", 250., 100.);
-		NodeXY<String> b = new NodeXY<String>("B", 100., 300.);
-		NodeXY<String> c = new NodeXY<String>("C", 400., 300.);
+		Node<String> a = new Node<String>("A", 250., 100.);
+		Node<String> b = new Node<String>("B", 100., 300.);
+		Node<String> c = new Node<String>("C", 400., 300.);
 		
 		g1.insertNode(a);
 		g1.insertNode(b);

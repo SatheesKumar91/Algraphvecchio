@@ -3,15 +3,24 @@ package graph;
 import java.util.Set;
 import java.util.TreeSet;
 
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+
 public class Graph<T extends Comparable<T>> implements IGraph<T> {
+
+	// campi
 
 	private TreeSet<Node<T>> nodi;
 	private TreeSet<Edge<T>> archi;
+
+	// costruttore
 
 	public Graph() {
 		this.nodi = new TreeSet<Node<T>>();
 		this.archi = new TreeSet<Edge<T>>();
 	}
+
+	// metodi
 
 	@Override
 	public void insertNode(Node<T> u) {
@@ -76,4 +85,10 @@ public class Graph<T extends Comparable<T>> implements IGraph<T> {
 		System.out.println(" } ");
 	}
 
+	public Pane draw(Double raggio) {
+		Graphica<T> dg = new Graphica<T>();
+		Pane console = new Pane();
+		console = dg.disegna(this, raggio, Color.WHITE, Color.BLACK);
+		return console;
+	}
 }

@@ -9,10 +9,10 @@ import javafx.scene.text.Text;
 
 public class Graphica<T extends Comparable<T>> {
 	
-	public Pane disegna(GraphXY<T> graph, Double raggio, Paint c1, Paint c2) {
+	public Pane disegna(Graph<T> graph, Double raggio, Paint c1, Paint c2) {
 		Double font = raggio*2;
 		Pane console = new Pane();
-		for (EdgeXY<T> edge : graph.EXY()) {
+		for (Edge<T> edge : graph.E()) {
 			Line lineToAdd = new Line(edge.getUX(), edge.getUY(), edge.getVX(), edge.getVY());
 			Text textEdge = new Text(""+edge.getWeight());
 			textEdge.setX((edge.getNodeU().getX()+edge.getNodeV().getX())/2);
@@ -21,7 +21,7 @@ public class Graphica<T extends Comparable<T>> {
 			console.getChildren().addAll(lineToAdd, textEdge);
 		}
 		
-		for (NodeXY<T> node : graph.VXY()) {
+		for (Node<T> node : graph.V()) {
 			Circle circleToAdd = new Circle(node.getX(), node.getY(), raggio);
 			circleToAdd.setFill(c1);
 			circleToAdd.setStroke(c2);
