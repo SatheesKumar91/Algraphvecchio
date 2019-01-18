@@ -1,0 +1,8 @@
+git checkout -b BRANCH
+git checkout BRANCH
+git add .
+o
+git add FILE.EXT
+git commit -m "COMMENTO"
+git push origin BRANCH
+
